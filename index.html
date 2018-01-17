@@ -20,7 +20,29 @@
 </head>
 <body>
 
-<div id="visdown-input">  
+<div id="visdown-input"> 
+    
+#CALCULATE
+    
+```vis
+data:
+    url: data/notes.csv
+transform:
+    - filter: (datum.denom == 500) || (datum.year > 2010)
+mark: line
+encoding:
+    x:
+     field: year
+     type: N
+    y:
+     field: money
+     type: Q
+    color:
+     field: denom
+     type: N
+```
+    
+    
   
 # Siddharth Priya
   
