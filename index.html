@@ -54,7 +54,7 @@ encoding:
  y:
    aggregate: sum
    type: quantitative
-   field: number 
+   field: money 
  color:
      field: denom
      type: N
@@ -141,80 +141,4 @@ encoding:
     
      
     
-    
-    
-# AGGREGATE
-    
-```vis
-width: 600
-data:
-    url: data/notes.csv
-transform:
-    - filter: datum.money > 0
-mark: point
-encoding:
-    x:
-     field: year
-     type: N
-    y:
-     aggregate: sum
-     field: money
-     type: Q
-     scale:
-      type: log
-     
-```
-    
-#CALCULATE
-    
-```vis
-width: 600
-data:
-    url: data/notes.csv
-transform:
-    - filter: (datum.denom == 500)
-    - bin: true
-      field: year
-      as: yearBin
-mark: bar
-encoding:
-    x:
-     field: yearBin
-     type: N
-    y:
-     field: money
-     type: Q
-    color:
-     field: denom
-     type: N
-```
-    
-    
-  
-# Siddharth Priya
-  
-```vis
-data: 
-  url: data/cars.csv
-mark: point
-encoding:
-  x: 
-    field: kmpl
-    type: Q
-  y:   
-    field: price
-    type: Q
-  color:
-    field: type
-    type: N
-  size:
-    field: bhp
-    type: Q
-```
-    
-</div>
-<div id="visdown-output"></div>
-<script src="visdown.js"></script>
 
-</body>
-</html>
