@@ -23,10 +23,11 @@
 <div id="visdown-input"> 
     
 # Notes Over The Years
+   
 
 ```vis
-width: 1000
-height: 500
+width: 400
+height: 400
 data:
  url: data/notes.csv
 transform:
@@ -44,7 +45,7 @@ selection:
        step: 1
    'on': click
    resolve: global
-mark: circle
+mark: bar
 encoding:
  x:
    type: nominal
@@ -53,6 +54,9 @@ encoding:
    aggregate: sum
    type: quantitative
    field: number 
+ color:
+     field: denom
+     type: Q
 ```
 
     
@@ -66,7 +70,7 @@ data:
     url: data/notes.csv
 transform:
     - filter: datum.year == 1977
-mark: ring
+mark: line
 encoding:
     x:
      field: denom
@@ -100,7 +104,7 @@ width: 100
 data:
     url: data/notes.csv
 transform:
-    - filter: datum.year == cylyr_year
+    - filter: datum.year == 1979
 mark: line
 encoding:
     x:
@@ -130,7 +134,10 @@ encoding:
      type: Q
 ```
 
-     
+    ... so on
+
+    
+    
      
     
     
