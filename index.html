@@ -20,16 +20,16 @@
 </head>
 <body>
 
-<div id="visdown-input">  
+<div id="visdown-input">
+    
   
 # Notes Over The Years
-   
-
-```vis
+    
+ ```vis
 width: 400
 height: 400
 data:
- url: data/notes.csv
+ url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
 transform:
 - filter: datum.year == cylyr_year
 selection:
@@ -54,11 +54,12 @@ encoding:
    aggregate: sum
    type: quantitative
    field: money 
+   scale:
+     domain(0,8000)
  color:
      field: denom
      type: N
 ```
-
     
     
     
@@ -67,7 +68,7 @@ encoding:
 ```vis
 width: 100
 data:
-    url: data/notes.csv
+    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
 transform:
     - filter: datum.year == 1977
 mark: line
@@ -84,7 +85,7 @@ encoding:
 ```vis
 width: 100
 data:
-    url: data/notes.csv
+    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
 transform:
     - filter: datum.year == 1978
 mark: line
@@ -102,7 +103,7 @@ encoding:
 ```vis
 width: 100
 data:
-    url: data/notes.csv
+    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
 transform:
     - filter: datum.year == 1979
 mark: line
@@ -120,7 +121,7 @@ encoding:
 ```vis
 width: 100
 data:
-    url: data/notes.csv
+    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
 transform:
     - filter: datum.year == 1980
 mark: line
