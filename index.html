@@ -20,10 +20,10 @@
 </head>
 <body>
 
+    <h1>Notes Over The Years</h1>
+
 <div id="visdown-input">
     
-  
-# Notes Over The Years
   ```vis
 width: 400
 height: 400
@@ -57,81 +57,7 @@ encoding:
      field: denom
      type: N
 ```
-    
-    
-# 1977
-    
-```vis
-width: 100
-data:
-    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-transform:
-    - filter: datum.year == 1977
-mark: line
-encoding:
-    x:
-     field: denom
-     type: N
-    y:
-     field: money
-     type: Q
-```
-# 1978 
-    
-```vis
-width: 100
-data:
-    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-transform:
-    - filter: datum.year == 1978
-mark: line
-encoding:
-    x:
-     field: denom
-     type: N
-    y:
-     aggregate: sum
-     field: money
-     type: Q
-```
-# 1979  
-    
-```vis
-width: 100
-data:
-    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-transform:
-    - filter: datum.year == 1979
-mark: line
-encoding:
-    x:
-     field: denom
-     type: N
-    y:
-     aggregate: sum
-     field: money
-     type: Q
-```
-# 1980
-    
-```vis
-width: 100
-data:
-    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-transform:
-    - filter: datum.year == 1980
-mark: line
-encoding:
-    x:
-     field: denom
-     type: N
-    y:
-     aggregate: sum
-     field: money
-     type: Q
-```
 
-    ... so on
 
     
 </div>
