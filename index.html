@@ -20,9 +20,35 @@
 </head>
 <body bgcolor="ffffff">
 <center>
-    <img src="https://drive.google.com/open?id=18h0WUC2ISOKKeoh33bviPrgBo6J2wQNw" alt="notes over the years">
-</img>
+<img src="head1.jpg" alt="notes over the years" />
+    
 <div id="visdown-input">
+```vis    
+width: 700
+height: 400
+data:
+  url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
+mark: bar
+encoding:
+  x:
+    field: year
+    type: temporal
+    axis:
+      format: %Y
+      labelAngle: 0
+      title: Year
+      titleFontSize: 12
+  y:
+    aggregate: sum
+    field: money
+    type: quantitative
+    axis:
+      title: Notes in Circulation (Value ₹ Billions)
+      titleFontSize: 12
+  color:
+    field: denom
+    type: nominal
+```    
     
   ```vis
 width: 700
