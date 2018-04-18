@@ -24,67 +24,7 @@
 <img src="head1.jpg" alt="notes over the years" />
     
 <div id="visdown-input">
-```vis    
-width: 700
-height: 400
-data:
-  url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-mark: bar
-encoding:
-  x:
-    field: year
-    type: temporal
-    axis:
-      format: %Y
-      labelAngle: 0
-      title: Year
-      titleFontSize: 12
-  y:
-    aggregate: sum
-    field: money
-    type: quantitative
-    axis:
-      title: Notes in Circulation (Value ₹ Billions)
-      titleFontSize: 12
-  color:
-    field: denom
-    type: nominal
-```    
-    
-  ```vis
-width: 700
-height: 400
-data:
- url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
-transform:
-- filter: datum.year == cylyr_year
-selection:
- cylyr:
-   type: single
-   fields:
-   - year
-   bind:
-     year:
-       input: range
-       min: 1977
-       max: 2015
-       step: 1
-   'on': click
-   resolve: global
-mark: bar
-encoding:
- x:
-   type: nominal
-   field: denom
- y:
-   aggregate: sum
-   type: quantitative
-   field: money 
- color:
-     field: denom
-     type: N
-```
-    
+
 </div>
 <div id="visdown-output"></div>
 <script src="visdown.js"></script>
